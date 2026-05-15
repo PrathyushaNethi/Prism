@@ -3,6 +3,6 @@
     <fullName>InspectionDate__c</fullName>
     <label>Inspection Date</label>
     <type>Date</type>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

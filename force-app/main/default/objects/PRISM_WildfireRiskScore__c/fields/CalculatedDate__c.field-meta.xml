@@ -3,6 +3,6 @@
     <fullName>CalculatedDate__c</fullName>
     <label>Calculated Date</label>
     <type>DateTime</type>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

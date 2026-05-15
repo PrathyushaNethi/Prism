@@ -5,7 +5,7 @@
     <type>Lookup</type>
     <referenceTo>User</referenceTo>
     <relationshipLabel>Inspections</relationshipLabel>
-    <relationshipName>Inspections</relationshipName>
-    <required>true</required>
+    <relationshipName>PRISM_Inspections</relationshipName>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

@@ -5,6 +5,6 @@
     <type>Number</type>
     <precision>5</precision>
     <scale>2</scale>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

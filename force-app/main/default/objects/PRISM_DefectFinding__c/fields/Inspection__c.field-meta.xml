@@ -6,6 +6,6 @@
     <referenceTo>PRISM_Inspection__c</referenceTo>
     <relationshipLabel>Defect Findings</relationshipLabel>
     <relationshipName>DefectFindings</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

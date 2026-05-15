@@ -12,6 +12,6 @@
             <value><fullName>Remote Sensing</fullName><default>false</default><label>Remote Sensing</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

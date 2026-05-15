@@ -6,6 +6,6 @@
     <referenceTo>PRISM_Circuit__c</referenceTo>
     <relationshipLabel>Assets</relationshipLabel>
     <relationshipName>Assets</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

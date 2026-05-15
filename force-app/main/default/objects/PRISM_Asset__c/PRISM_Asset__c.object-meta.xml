@@ -5,7 +5,7 @@
     <description>Equipment component associated with a Circuit.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -19,6 +19,6 @@
         <startingNumber>1</startingNumber>
     </nameField>
     <pluralLabel>Assets</pluralLabel>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

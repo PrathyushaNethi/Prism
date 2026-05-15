@@ -10,7 +10,7 @@
     <description>Top-level geographic and operational territory for utility inspection coverage.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>

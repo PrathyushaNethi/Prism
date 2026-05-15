@@ -6,6 +6,6 @@
     <referenceTo>PRISM_ServiceTerritory__c</referenceTo>
     <relationshipLabel>Circuits</relationshipLabel>
     <relationshipName>Circuits</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

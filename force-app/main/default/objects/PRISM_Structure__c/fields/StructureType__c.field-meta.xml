@@ -11,6 +11,6 @@
             <value><fullName>Other</fullName><default>false</default><label>Other</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

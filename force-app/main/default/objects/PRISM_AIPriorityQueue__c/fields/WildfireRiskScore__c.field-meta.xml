@@ -6,6 +6,6 @@
     <referenceTo>PRISM_WildfireRiskScore__c</referenceTo>
     <relationshipLabel>AI Priority Queue Entries</relationshipLabel>
     <relationshipName>AIPriorityQueueEntries</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

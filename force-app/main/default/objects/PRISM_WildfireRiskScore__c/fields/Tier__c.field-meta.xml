@@ -12,6 +12,6 @@
             <value><fullName>Tier 5 - Low</fullName><default>false</default><label>Tier 5 - Low</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

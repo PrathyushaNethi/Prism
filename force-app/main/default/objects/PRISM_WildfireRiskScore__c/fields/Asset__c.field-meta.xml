@@ -6,6 +6,6 @@
     <referenceTo>PRISM_Asset__c</referenceTo>
     <relationshipLabel>Wildfire Risk Scores</relationshipLabel>
     <relationshipName>WildfireRiskScores</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

@@ -11,6 +11,6 @@
             <value><fullName>4 - Monitor</fullName><default>false</default><label>4 - Monitor</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

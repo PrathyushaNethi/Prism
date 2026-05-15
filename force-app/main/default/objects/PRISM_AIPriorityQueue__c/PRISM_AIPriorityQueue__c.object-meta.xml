@@ -5,7 +5,7 @@
     <description>AI-generated prioritized action queue. Combines wildfire risk score and defect severity to rank assets needing work.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>

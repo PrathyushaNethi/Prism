@@ -12,6 +12,6 @@
             <value><fullName>Monitor and Reassess</fullName><default>false</default><label>Monitor and Reassess</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

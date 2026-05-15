@@ -5,7 +5,7 @@
     <description>Work order for repair or maintenance driven by a Defect Finding or AI Priority Queue.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>

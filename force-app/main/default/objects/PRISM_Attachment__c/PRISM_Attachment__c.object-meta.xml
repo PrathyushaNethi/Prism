@@ -5,7 +5,7 @@
     <description>An attachment on a Structure — telecom, power, or street light equipment. Master-detail to Structure.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>

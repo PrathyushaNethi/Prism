@@ -6,6 +6,6 @@
     <referenceTo>PRISM_Structure__c</referenceTo>
     <relationshipLabel>Attachments</relationshipLabel>
     <relationshipName>Attachments</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

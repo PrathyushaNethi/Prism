@@ -11,6 +11,6 @@
             <value><fullName>Substation</fullName><default>false</default><label>Substation</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

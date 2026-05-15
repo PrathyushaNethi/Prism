@@ -5,7 +5,7 @@
     <description>Field inspection record for an Attachment — captures date, inspector, method, and hazard conditions.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -19,6 +19,6 @@
         <startingNumber>1</startingNumber>
     </nameField>
     <pluralLabel>Inspections</pluralLabel>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

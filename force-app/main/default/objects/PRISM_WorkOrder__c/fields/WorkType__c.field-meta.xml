@@ -12,6 +12,6 @@
             <value><fullName>Inspection Follow-up</fullName><default>false</default><label>Inspection Follow-up</label></value>
         </valueSetDefinition>
     </valueSet>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

@@ -6,6 +6,6 @@
     <referenceTo>PRISM_Attachment__c</referenceTo>
     <relationshipLabel>Inspections</relationshipLabel>
     <relationshipName>Inspections</relationshipName>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

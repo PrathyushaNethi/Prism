@@ -3,6 +3,6 @@
     <fullName>GeneratedDate__c</fullName>
     <label>Generated Date</label>
     <type>DateTime</type>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

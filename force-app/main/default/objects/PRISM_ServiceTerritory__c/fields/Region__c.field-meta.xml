@@ -4,6 +4,6 @@
     <label>Region</label>
     <type>Text</type>
     <length>100</length>
-    <required>true</required>
+    
     <trackHistory>true</trackHistory>
 </CustomField>

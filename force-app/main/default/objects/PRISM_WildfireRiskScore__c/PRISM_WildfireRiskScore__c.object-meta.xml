@@ -5,7 +5,7 @@
     <description>AI-calculated wildfire risk score for an Asset. Updated by batch job and triggered scoring engine.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>true</enableChangeDataCapture>
+
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -19,6 +19,6 @@
         <startingNumber>1</startingNumber>
     </nameField>
     <pluralLabel>Wildfire Risk Scores</pluralLabel>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
