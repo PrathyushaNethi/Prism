@@ -1,0 +1,49 @@
+.queue-row {
+    border-radius: 4px;
+    border-left: 4px solid #dddbda;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.tier-1 { border-left-color: #ba0517; background: #fff5f5; }
+.tier-2 { border-left-color: #ff8f00; background: #fffbf0; }
+
+.rank-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #54698d;
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.score-extreme  { background: #fce7e7; color: #ba0517; }
+.score-high     { background: #fff3cd; color: #7d4e00; }
+.score-elevated { background: #fff9e6; color: #7d4e00; }
+.score-moderate { background: #e8f4fd; color: #005fb2; }
+
+.action-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.action-critical { background: #ba0517; color: #fff; }
+.action-high     { background: #ff8f00; color: #fff; }
+.action-normal   { background: #0070d2; color: #fff; }
+
+.rationale-panel {
+    background: #f4f6f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.rationale-toggle {
+    float: right;
+    margin-top: -1.5rem;
+}

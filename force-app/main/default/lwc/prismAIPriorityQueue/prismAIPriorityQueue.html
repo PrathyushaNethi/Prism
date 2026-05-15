@@ -1,0 +1,92 @@
+<template>
+    <lightning-card title="AI Priority Queue" icon-name="utility:einstein">
+        <div slot="actions">
+            <lightning-button label="Refresh Queue" icon-name="utility:refresh" onclick={handleRefresh}></lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:true={hasEntries}>
+                    <div class="queue-header slds-grid slds-gutters slds-m-bottom_small">
+                        <div class="slds-col slds-size_1-of-12">
+                            <span class="slds-text-color_weak slds-text-title_caps">Rank</span>
+                        </div>
+                        <div class="slds-col slds-size_4-of-12">
+                            <span class="slds-text-color_weak slds-text-title_caps">Asset</span>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12">
+                            <span class="slds-text-color_weak slds-text-title_caps">Score</span>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <span class="slds-text-color_weak slds-text-title_caps">Recommended Action</span>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12">
+                            <span class="slds-text-color_weak slds-text-title_caps">Work Order</span>
+                        </div>
+                    </div>
+
+                    <template for:each={queueEntries} for:item="entry">
+                        <div key={entry.Id} class={entry.rowClass}>
+                            <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                <div class="slds-col slds-size_1-of-12">
+                                    <span class="rank-number">{entry.Rank__c}</span>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <p class="slds-text-body_regular">{entry.WildfireRiskScore__r.Asset__r.Name}</p>
+                                    <p class="slds-text-color_weak slds-text-body_small">{entry.WildfireRiskScore__r.Tier__c}</p>
+                                </div>
+                                <div class="slds-col slds-size_2-of-12">
+                                    <div class="score-gauge">
+                                        <span class={entry.scoreClass}>{entry.CompositeScore__c}</span>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12">
+                                    <span class={entry.actionClass}>{entry.RecommendedAction__c}</span>
+                                </div>
+                                <div class="slds-col slds-size_2-of-12">
+                                    <template if:true={entry.WorkOrderCreated__c}>
+                                        <lightning-icon icon-name="utility:check" variant="success" size="x-small"></lightning-icon>
+                                        <span class="slds-text-color_success"> Created</span>
+                                    </template>
+                                    <template if:false={entry.WorkOrderCreated__c}>
+                                        <lightning-button
+                                            label="Create WO"
+                                            variant="brand"
+                                            size="small"
+                                            data-id={entry.Id}
+                                            onclick={handleCreateWO}>
+                                        </lightning-button>
+                                    </template>
+                                </div>
+                            </div>
+                            <template if:true={entry.showRationale}>
+                                <div class="rationale-panel slds-m-top_x-small">
+                                    <p class="slds-text-body_small">{entry.ActionRationale__c}</p>
+                                </div>
+                            </template>
+                            <lightning-button-icon
+                                icon-name="utility:chevrondown"
+                                variant="bare"
+                                size="x-small"
+                                data-id={entry.Id}
+                                onclick={toggleRationale}
+                                class="rationale-toggle">
+                            </lightning-button-icon>
+                        </div>
+                    </template>
+                </template>
+
+                <template if:false={hasEntries}>
+                    <div class="slds-illustration slds-illustration_small">
+                        <lightning-icon icon-name="utility:check" size="large" variant="success"></lightning-icon>
+                        <p class="slds-text-heading_small slds-m-top_small">Queue is clear — no high-risk assets at this time.</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

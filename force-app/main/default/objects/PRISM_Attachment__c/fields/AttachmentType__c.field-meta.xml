@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AttachmentType__c</fullName>
+    <label>Attachment Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>Telecom</fullName><default>false</default><label>Telecom</label></value>
+            <value><fullName>Power</fullName><default>false</default><label>Power</label></value>
+            <value><fullName>Street Light</fullName><default>false</default><label>Street Light</label></value>
+            <value><fullName>Cable TV</fullName><default>false</default><label>Cable TV</label></value>
+            <value><fullName>Fiber Optic</fullName><default>false</default><label>Fiber Optic</label></value>
+            <value><fullName>Other</fullName><default>false</default><label>Other</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

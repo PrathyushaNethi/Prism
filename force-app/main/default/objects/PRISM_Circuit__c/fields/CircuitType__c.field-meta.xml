@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CircuitType__c</fullName>
+    <label>Circuit Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>Feeder</fullName><default>true</default><label>Feeder</label></value>
+            <value><fullName>Distribution Line</fullName><default>false</default><label>Distribution Line</label></value>
+            <value><fullName>Transmission Line</fullName><default>false</default><label>Transmission Line</label></value>
+            <value><fullName>Substation</fullName><default>false</default><label>Substation</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

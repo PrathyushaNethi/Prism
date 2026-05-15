@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DefectType__c</fullName>
+    <label>Defect Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>Broken Insulator</fullName><default>false</default><label>Broken Insulator</label></value>
+            <value><fullName>Conductor Damage</fullName><default>false</default><label>Conductor Damage</label></value>
+            <value><fullName>Vegetation Encroachment</fullName><default>false</default><label>Vegetation Encroachment</label></value>
+            <value><fullName>Corrosion</fullName><default>false</default><label>Corrosion</label></value>
+            <value><fullName>Loose Hardware</fullName><default>false</default><label>Loose Hardware</label></value>
+            <value><fullName>Woodpecker Damage</fullName><default>false</default><label>Woodpecker Damage</label></value>
+            <value><fullName>Lightning Damage</fullName><default>false</default><label>Lightning Damage</label></value>
+            <value><fullName>Other</fullName><default>false</default><label>Other</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

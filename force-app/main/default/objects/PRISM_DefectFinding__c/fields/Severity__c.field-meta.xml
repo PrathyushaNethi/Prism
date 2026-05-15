@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Severity__c</fullName>
+    <label>Severity</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>1 - Imminent Hazard</fullName><default>false</default><label>1 - Imminent Hazard</label></value>
+            <value><fullName>2 - Priority</fullName><default>false</default><label>2 - Priority</label></value>
+            <value><fullName>3 - Routine</fullName><default>true</default><label>3 - Routine</label></value>
+            <value><fullName>4 - Monitor</fullName><default>false</default><label>4 - Monitor</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

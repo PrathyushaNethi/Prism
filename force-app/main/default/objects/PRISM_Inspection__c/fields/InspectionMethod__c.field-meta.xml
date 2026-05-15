@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InspectionMethod__c</fullName>
+    <label>Inspection Method</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>Ground Patrol</fullName><default>true</default><label>Ground Patrol</label></value>
+            <value><fullName>Aerial Drone</fullName><default>false</default><label>Aerial Drone</label></value>
+            <value><fullName>Helicopter</fullName><default>false</default><label>Helicopter</label></value>
+            <value><fullName>Climbing</fullName><default>false</default><label>Climbing</label></value>
+            <value><fullName>Remote Sensing</fullName><default>false</default><label>Remote Sensing</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

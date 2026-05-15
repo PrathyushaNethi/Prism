@@ -1,0 +1,137 @@
+<template>
+    <lightning-card title="Inspection Assignment" icon-name="utility:location">
+
+        <!-- RED FLAG WARNING BANNER -->
+        <template if:true={isRedFlag}>
+            <div class="red-flag-banner slds-notify slds-notify_alert slds-theme_error" role="alert">
+                <span class="slds-assistive-text">Error</span>
+                <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+                    <lightning-icon icon-name="utility:error" variant="inverse" size="small"></lightning-icon>
+                </span>
+                <h2 class="slds-text-heading_small">
+                    🔴 RED FLAG WARNING ACTIVE
+                </h2>
+                <p class="slds-m-top_xx-small">
+                    Wind: {windSpeed} mph &nbsp;|&nbsp;
+                    Humidity: {humidity}% &nbsp;|&nbsp;
+                    Temp: {temperature}°F
+                </p>
+                <p>
+                    Fire Danger: <strong>{fireDanger}</strong>
+                    &nbsp;&mdash;&nbsp;
+                    Nearest Active Fire: <strong>{nearestFire} miles {fireDirection}</strong>
+                </p>
+            </div>
+        </template>
+
+        <!-- INSPECTION DETAILS -->
+        <div class="slds-p-around_medium">
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading inspection..." size="medium"></lightning-spinner>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:true={inspection}>
+
+                    <!-- Header row: ID + Status badge -->
+                    <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                        <div class="slds-col slds-size_8-of-12">
+                            <h2 class="slds-text-heading_medium">{inspection.Name}</h2>
+                            <p class="slds-text-color_weak">{inspection.Attachment__r.Name} &bull; {inspection.Attachment__r.AttachmentType__c}</p>
+                        </div>
+                        <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                            <lightning-badge label={inspection.Status__c} class={statusBadgeClass}></lightning-badge>
+                        </div>
+                    </div>
+
+                    <!-- Key fields -->
+                    <lightning-record-view-form record-id={recordId} object-api-name="PRISM_Inspection__c">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                <lightning-output-field field-name="InspectionDate__c"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                <lightning-output-field field-name="InspectionMethod__c"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                <lightning-output-field field-name="Inspector__c"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                <lightning-output-field field-name="FireDangerLevel__c"></lightning-output-field>
+                            </div>
+                        </div>
+                    </lightning-record-view-form>
+
+                    <!-- Weather conditions panel -->
+                    <div class="weather-panel slds-box slds-m-top_medium">
+                        <h3 class="slds-text-heading_small slds-m-bottom_small">
+                            <lightning-icon icon-name="utility:alert" size="x-small" class="slds-m-right_xx-small"></lightning-icon>
+                            Live Hazard Conditions
+                        </h3>
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-size_1-of-3 weather-stat">
+                                <span class="weather-value">{windSpeed}</span>
+                                <span class="weather-label">mph wind</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 weather-stat">
+                                <span class="weather-value">{humidity}%</span>
+                                <span class="weather-label">humidity</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 weather-stat">
+                                <span class="weather-value">{temperature}°F</span>
+                                <span class="weather-label">temperature</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Defect Findings related list -->
+                    <div class="slds-m-top_medium">
+                        <h3 class="slds-text-heading_small slds-m-bottom_small">Defect Findings</h3>
+                        <template if:true={hasDefects}>
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th scope="col"><div class="slds-truncate">Type</div></th>
+                                        <th scope="col"><div class="slds-truncate">Severity</div></th>
+                                        <th scope="col"><div class="slds-truncate">Work Order</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={defects} for:item="defect">
+                                        <tr key={defect.Id}>
+                                            <td>{defect.DefectType__c}</td>
+                                            <td>
+                                                <span class={defect.severityClass}>{defect.Severity__c}</span>
+                                            </td>
+                                            <td>
+                                                <template if:true={defect.WorkOrderCreated__c}>
+                                                    <lightning-icon icon-name="utility:check" size="x-small" variant="success"></lightning-icon>
+                                                </template>
+                                                <template if:false={defect.WorkOrderCreated__c}>
+                                                    <lightning-button label="Create WO" size="small"
+                                                        data-id={defect.Id}
+                                                        onclick={handleCreateWorkOrder}>
+                                                    </lightning-button>
+                                                </template>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </template>
+                        <template if:false={hasDefects}>
+                            <p class="slds-text-color_weak">No defects recorded.</p>
+                        </template>
+
+                        <lightning-button
+                            label="Add Defect Finding"
+                            icon-name="utility:add"
+                            class="slds-m-top_small"
+                            onclick={handleAddDefect}>
+                        </lightning-button>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

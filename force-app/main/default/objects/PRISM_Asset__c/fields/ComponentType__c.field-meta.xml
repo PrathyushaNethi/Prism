@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComponentType__c</fullName>
+    <label>Component Type</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <value><fullName>Insulator</fullName><default>false</default><label>Insulator</label></value>
+            <value><fullName>Conductor</fullName><default>false</default><label>Conductor</label></value>
+            <value><fullName>Fuse</fullName><default>false</default><label>Fuse</label></value>
+            <value><fullName>Recloser</fullName><default>false</default><label>Recloser</label></value>
+            <value><fullName>Capacitor Bank</fullName><default>false</default><label>Capacitor Bank</label></value>
+            <value><fullName>Voltage Regulator</fullName><default>false</default><label>Voltage Regulator</label></value>
+            <value><fullName>Other</fullName><default>false</default><label>Other</label></value>
+        </valueSetDefinition>
+    </valueSet>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

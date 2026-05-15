@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ServiceTerritory__c</fullName>
+    <label>Service Territory</label>
+    <type>MasterDetail</type>
+    <referenceTo>PRISM_ServiceTerritory__c</referenceTo>
+    <relationshipLabel>Structures</relationshipLabel>
+    <relationshipName>Structures</relationshipName>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+</CustomField>

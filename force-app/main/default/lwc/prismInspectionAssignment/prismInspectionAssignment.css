@@ -1,0 +1,31 @@
+.red-flag-banner {
+    background-color: #ba0517;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.weather-panel {
+    background-color: #f3f3f3;
+    border-left: 4px solid #0070d2;
+}
+
+.weather-stat {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.weather-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #16325c;
+}
+
+.weather-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #54698d;
+    text-transform: uppercase;
+}
